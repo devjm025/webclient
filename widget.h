@@ -19,9 +19,10 @@ class Widget : public QWidget
 public:
     Widget(QWidget *parent = nullptr);
     ~Widget();
-    //QTcpSocket socket_; // behind member variable, put _
-    QSslSocket socket_; // SSL communication
+    QTcpSocket tcp_socket_; // behind member variable, put _
+    QSslSocket ssl_socket_; // SSL communication
     //QUdpSocket socket_;
+    void checkState();
 
 public slots:
     void doConnected(); // we have to make doConnected func's body in widget.cpp
@@ -34,6 +35,10 @@ private slots:
     void on_pbDisconnect_clicked();
 
     void on_pbSend_clicked();
+
+    void on_cbSSL_clicked(bool checked);
+
+    void on_cbTCP_clicked(bool checked);
 
 private:
     Ui::Widget *ui;

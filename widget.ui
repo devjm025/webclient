@@ -66,6 +66,20 @@
       </layout>
      </item>
      <item>
+      <widget class="QCheckBox" name="cbTCP">
+       <property name="text">
+        <string>TCP</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QCheckBox" name="cbSSL">
+       <property name="text">
+        <string>SSL</string>
+       </property>
+      </widget>
+     </item>
+     <item>
       <widget class="QPlainTextEdit" name="pteMessage"/>
      </item>
      <item>
